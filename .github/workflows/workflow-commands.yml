@@ -1,0 +1,15 @@
+name: "workflow commands example"
+
+on: ['push']
+
+jobs:
+  workflow-command-jobs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "group message"
+        run: |
+          echo "::group::Group Message"
+          echo "msg 1"
+          echo "msg 2"
+          echo "::endgroup::"
+
