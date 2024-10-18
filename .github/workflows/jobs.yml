@@ -1,0 +1,14 @@
+name: conditional-workflow
+on: [push]
+jobs:
+  job2:
+    needs: job1
+    runs-on: ubuntu-latest
+    steps:
+      - name: "job2"
+        run:  echo "World!"
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "job1"
+        run:  echo "Hello "
