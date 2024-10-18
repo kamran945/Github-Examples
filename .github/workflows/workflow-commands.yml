@@ -12,4 +12,10 @@ jobs:
           echo "msg 1"
           echo "msg 2"
           echo "::endgroup::"
+      - name: "create env variable"
+        run: |
+          echo "ENV_VAR=hello" >> $GITHUB_ENV
+      - name: "test env variable"
+        run: |
+          echo $ENV_VAR
 
