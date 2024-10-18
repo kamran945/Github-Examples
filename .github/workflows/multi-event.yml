@@ -1,3 +1,5 @@
+name: multi event workflow
+
 on:
   push:
     branches:
